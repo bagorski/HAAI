@@ -195,9 +195,7 @@ footer a:visited {
 }
 
 .hero p::first-letter {
-    font-size: 2rem;
     font-weight: bold;
-    float: left;
     margin-right: 0.25rem;
 }
 
@@ -256,14 +254,40 @@ footer a:visited {
 }
 
 #manifesto p::first-letter {
-    font-size: 2rem;
     font-weight: bold;
-    float: left;
     margin-right: 0.25rem;
 }
 
 #first_paragraph_body {
     display: none;
+}
+
+@supports (initial-letter: 2) or (-webkit-initial-letter: 2) {
+    .hero p::first-letter {
+        -webkit-initial-letter: 2;
+        initial-letter: 2;
+        margin-right: 1rem;
+    }
+    
+    #manifesto p::first-letter {
+        -webkit-initial-letter: 2;
+        initial-letter: 2;
+        margin-right: 1rem;
+    }
+}
+
+@supports not ((initial-letter: 2) or (-webkit-initial-letter: 2)) {
+    .hero p::first-letter {
+        font-size: 2rem;
+        float: left;
+        line-height: 1;
+    }
+    
+    #manifesto p::first-letter {
+        font-size: 2rem;
+        float: left;
+        line-height: 1;
+    }
 }
 
 @media (max-width: 500px) {
