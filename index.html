@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting...</title>
+</head>
+<body>
+<script>
+  const saved = localStorage.getItem("lang");
+  if (saved === "pl" || saved === "en") {
+    location.replace("/" + saved + "/");
+  } else {
+    const lang = navigator.language || navigator.userLanguage;
+    const isPolish = lang.startsWith("pl");
+    const target = isPolish ? "/pl/" : "/en/";
+    location.replace(target);
+  }
+</script>
+</body>
+</html>

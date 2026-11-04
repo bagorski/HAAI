@@ -1,0 +1,289 @@
+:root {
+    --foundation-orange: #E85125;
+    --foundation-orange-hover: #ef7752;
+    --foundation-blue: #243FB1;
+    --foundation-teal: #158b8f;
+
+    --primary-color: var(--foundation-orange);
+    --primary-color-hover: var(--foundation-orange-hover);
+    --header-background: rgba(255, 255, 255, 0.8);
+    --header-backdrop-filter: blur(10px);
+
+    --font-family: "Afacad Flux", sans-serif;
+    --font-family-headings: "Alice", serif;
+
+    --manifesto-max-width: 500px;
+    --content-max-width: 800px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+a {
+    color: var(--foundation-blue);
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--foundation-teal)
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 5rem;
+    margin: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: 1.25rem;
+    font-weight: 400;
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+header {
+    color: black;
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 0.5rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+}
+
+header #logo {
+    height: 3rem;
+    margin-top: 0.25rem;
+    transition: opacity 0.3s ease;
+}
+
+header #logo:hover {
+    opacity: 0.8;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+footer {
+    padding: 0;
+    color: white;
+    font-size: 1rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+
+footer a:visited {
+    color: white;
+}
+
+/* footer .copyright {
+    padding: 0.5rem;
+} */
+
+.content {
+    max-width: var(--content-max-width);
+    margin: auto;
+    padding: 1rem;
+}
+
+.content h2 {
+    padding: 1rem 0 0 0;
+    margin: 0;
+}
+
+.content h3 {
+    padding: 0;
+    margin: 0;
+}
+
+.content p {
+    padding: 0;
+    margin: 0;
+}
+
+.hero {
+    display: grid;
+}
+
+.hero_image {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 60vw;
+
+    background-image: url('../resources/henri-matisse-danse.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.image_credits {
+    text-decoration: none;
+    /* margin-top: auto;
+    margin-bottom: auto; */
+    writing-mode: vertical-rl;
+    /* transform: rotate(180deg); */
+    color: white;
+    padding: 0.5rem 0.15rem;
+    font-size: 0.75rem;
+    /* opacity: 0.7; */
+}
+
+.image_credits:hover,
+.image_credits:visited {
+    color: white;
+}
+
+.hero_image,
+.hero_content {
+    grid-area: 1/1;
+}
+
+.hero_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color: black;
+}
+
+.hero h1 {
+    font-family: var(--font-family-headings);
+    background-color: rgba(255, 255, 255, 1);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.hero p {
+    background-color: rgba(255, 255, 255, 1);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0.5rem;
+    max-width: var(--manifesto-max-width);
+}
+
+.hero p::first-letter {
+    font-size: 2rem;
+    font-weight: bold;
+    float: left;
+    margin-right: 0.25rem;
+}
+
+.button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.button:visited {
+    color: white;
+}
+
+.button:hover {
+    color: white;
+    background-color: var(--primary-color-hover);
+}
+
+.whitespace,
+.bluespace,
+.tealspace,
+.orangespace {
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.whitespace {
+    background-color: white;
+}
+
+.bluespace {
+    background-color: var(--foundation-blue);
+}
+
+.tealspace {
+    background-color: var(--foundation-teal);
+}
+
+.orangespace {
+    background-color: var(--foundation-orange);
+}
+
+#manifesto {
+    padding: 0.5rem;
+    width: fit-content;
+    max-width: var(--manifesto-max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#manifesto p::first-letter {
+    font-size: 2rem;
+    font-weight: bold;
+    float: left;
+    margin-right: 0.25rem;
+}
+
+/* #matisse-dance-ii {
+    max-width: 100%;
+    height: auto;
+    display: block;
+} */
+
+#first_paragraph_body {
+    display: none;
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 3rem;
+    }
+    #first_paragraph_hero {
+        display: none;
+    }
+    #first_paragraph_body {
+        display: block;
+    }
+}
