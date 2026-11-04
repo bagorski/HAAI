@@ -112,10 +112,6 @@ footer a:visited {
     color: white;
 }
 
-/* footer .copyright {
-    padding: 0.5rem;
-} */
-
 .content {
     max-width: var(--content-max-width);
     margin: auto;
@@ -265,12 +261,6 @@ footer a:visited {
     float: left;
     margin-right: 0.25rem;
 }
-
-/* #matisse-dance-ii {
-    max-width: 100%;
-    height: auto;
-    display: block;
-} */
 
 #first_paragraph_body {
     display: none;
